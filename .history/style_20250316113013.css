@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #6a5acd;
+    --secondary-color: #f4f4f4;
+    --text-color: #333;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--secondary-color);
+}
+.container {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar h2 {
+    margin: 0 0 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+.add-note {
+    margin-top: auto;
+    padding: 10px;
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+header input {
+    padding: 10px;
+    width: 70%;
+}
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+.note {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.note img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.add-note:hover {
+    background: rgba(106, 90, 205, 0.5);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+    header i, .add-note {
+        display: none;
+    }
+}
+

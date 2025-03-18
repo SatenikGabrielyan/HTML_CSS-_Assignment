@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Include Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <h2>Notes</h2>
+        </div>
+        <ul class="sidebar-list">
+          <li><i class="fas fa-home"></i> Home</li>
+          <li><i class="fas fa-search"></i> Search</li>
+          <li><i class="fas fa-bell"></i> Notifications</li>
+        </ul>
+      </nav>
+      <!-- Main Content -->
+      <main class="main-content">
+        <header>
+          <div class="header-left">
+            <p>Hello, Peter!</p>
+          </div>
+          <div class="header-right">
+            <i class="fas fa-bell"></i>
+            <button class="add-note-btn">
+              <i class="fas fa-plus"></i> Add New Note
+            </button>
+          </div>
+        </header>
+        <section class="notes-grid">
+          <!-- Note Item -->
+          <div class="note-item image-note">
+            <img src="https://via.placeholder.com/150" alt="Note Image" />
+          </div>
+          <!-- Note Item -->
+          <div class="note-item text-note">
+            <p>Sample text note content...</p>
+          </div>
+          <!-- Note Item -->
+          <div class="note-item mixed-note">
+            <img src="https://via.placeholder.com/150" alt="Note Image" />
+            <p>Sample mixed note content...</p>
+          </div>
+          <!-- Additional notes can be added similarly -->
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

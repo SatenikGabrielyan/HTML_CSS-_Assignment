@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Taking App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #6a5acd;
+            --secondary-color: #f4f4f4;
+            --text-color: #333;
+            --hover-color: rgba(106, 90, 205, 0.5);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--secondary-color);
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 280px;
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar h2 {
+            margin: 0 0 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+        .add-note {
+            margin-top: auto;
+            padding: 10px;
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .add-note i {
+            margin-right: 5px;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 8px;
+            border-radius: 5px;
+            width: 70%;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            width: 100%;
+        }
+        .search-bar i {
+            color: var(--primary-color);
+        }
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .note {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .note img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .note .date {
+            font-size: 12px;
+            color: gray;
+            margin-bottom: 5px;
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .filter-buttons button {
+            background: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .filter-buttons button:hover {
+            background: var(--hover-color);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            .notes-grid {
+                grid-template-columns: 1fr;
+            }
+            header .search-bar, header .fa-bell {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Hello, Peter!</h2>
+            <nav>
+                <ul>
+                    <li><i class="fas fa-home"></i> Overview</li>
+                    <li><i class="fas fa-tasks"></i> Tasks</li>
+                    <li><i class="fas fa-folder"></i> Documents</li>
+                    <li><i class="fas fa-sticky-note"></i> Notes</li>
+                    <li><i class="fas fa-chart-line"></i> Output</li>
+                    <li><i class="fas fa-life-ring"></i> Support</li>
+                </ul>
+            </nav>
+            <button class="add-note"><i class="fas fa-plus"></i> Add New Note</button>
+        </aside>
+        <main class="content">
+            <header>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search notes...">
+                </div>
+                <i class="fas fa-bell"></i>
+            </header>
+            <div class="filter-buttons">
+                <button>All</button>
+                <button>Projects</button>
+                <button>Business</button>
+                <button>Personal</button>
+            </div>
+            <section class="notes-grid">
+                <div class="note">
+                    <p class="date">23 June, 2017</p>
+                    <p><strong>The monkey-rope</strong></p>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar.</p>
+                </div>
+                <div class="note">
+                    <p class="date">1 June, 2017</p>
+                    <p><strong>Vacation!</strong></p>
+                    <img src="image1.jpg" alt="Note Image">
+                </div>
+                <div class="note">
+                    <p class="date">10 May, 2017</p>
+                    <p><strong>New workplace</strong></p>
+                    <img src="image2.jpg" alt="Note Image">
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

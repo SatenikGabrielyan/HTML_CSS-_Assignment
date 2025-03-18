@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-Taking App</title>
+    <link rel="stylesheet" href="./">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Hello, Peter!</h2>
+            <nav>
+                <ul>
+                    <li><i class="fas fa-home"></i> Overview</li>
+                    <li><i class="fas fa-tasks"></i> Tasks</li>
+                    <li><i class="fas fa-folder"></i> Documents</li>
+                    <li><i class="fas fa-sticky-note"></i> Notes</li>
+                    <li><i class="fas fa-chart-line"></i> Output</li>
+                    <li><i class="fas fa-life-ring"></i> Support</li>
+                </ul>
+            </nav>
+            <button class="add-note"><i class="fas fa-plus"></i> Add New Note</button>
+        </aside>
+        <main class="content">
+            <header>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search notes...">
+                </div>
+                <i class="fas fa-bell"></i>
+            </header>
+            <div class="filter-buttons">
+                <button>All</button>
+                <button>Projects</button>
+                <button>Business</button>
+                <button>Personal</button>
+            </div>
+            <section class="notes-grid">
+                <div class="note">
+                    <p class="date">23 June, 2017</p>
+                    <p><strong>The monkey-rope</strong></p>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar.</p>
+                </div>
+                <div class="note">
+                    <p class="date">1 June, 2017</p>
+                    <p><strong>Vacation!</strong></p>
+                    <img src="image1.jpg" alt="Note Image">
+                </div>
+                <div class="note">
+                    <p class="date">10 May, 2017</p>
+                    <p><strong>New workplace</strong></p>
+                    <img src="image2.jpg" alt="Note Image">
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
