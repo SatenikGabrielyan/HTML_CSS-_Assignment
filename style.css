@@ -1,3 +1,4 @@
+
 /* CSS Variables for Colors */
 :root {
     --bg-color: #fbfbfb;
@@ -182,8 +183,23 @@ height: 100px;
     font-weight: normal;
     align-items: center;
 }
-@media only screen and (max-width: 1000px) {
-   .cont {
-      visibility: hidden;
-    }
-  }
+
+/* For small screen mobile (typically under 360px) */
+@media (max-width: 360px) {
+}
+
+/* For mobile screens (typically under 768px) */
+@media (max-width: 768px) {
+ 
+}
+
+/* For big screen mobile and small tablet screens (typically under 1024px) */
+@media (max-width: 1024px) {
+  
+}
+
+/* For tablet screens (typically under 1280px) */
+@media (max-width: 1280px) {
+  
+}
+
